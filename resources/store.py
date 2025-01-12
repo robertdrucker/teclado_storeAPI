@@ -5,10 +5,9 @@ from flask import request
 
 # used for creating a class
 # and the methods of that class route to specific endpoints
-from flask.views import MethodView
+from flask.views import MethodView 
 
 from flask_smorest import Blueprint, abort
-from db import stores
 from schemas import StoreSchema
 
 blp = Blueprint("Stores", __name__, description="Operations on stores")
