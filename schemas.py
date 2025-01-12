@@ -28,7 +28,7 @@ class PlainItemSchema(Schema):
 
 class PlainStoreSchema(Schema):
     id = fields.Int(dump_only=True)
-    name = fields.Str()
+    name = fields.Str(required=True)
 
 # load_only – Fields to skip during serialization (write-only fields)
 # This means that we are going to be able to pass in the store_id when we are 
