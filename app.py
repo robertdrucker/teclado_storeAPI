@@ -1,6 +1,7 @@
 import os
 
 from flask import Flask
+from flask_cors import CORS
 from flask_smorest import Api
 
 from db import db
@@ -19,6 +20,10 @@ from resources.tag import blp as TagBluePrint
 # create_app is automatically called by Flask
 def create_app(db_url=None):
     app = Flask(__name__)
+
+    # allow CORS
+    CORS(app)
+
     # This is a Flask configuration that handles propogation of 
     # exceptions hidden within Flask extension(s) so that they are 
     # or are not propogated into the main app so we can see it.
